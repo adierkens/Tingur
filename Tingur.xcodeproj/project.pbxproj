@@ -13,6 +13,9 @@
 		66AB5ABA1B904D020010D017 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AB5AB91B904D020010D017 /* Images.xcassets */; };
 		66AB5ABD1B904D020010D017 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AB5ABB1B904D020010D017 /* LaunchScreen.xib */; };
 		66AB5AC91B904D020010D017 /* TingurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB5AC81B904D020010D017 /* TingurTests.swift */; };
+		66AB5ADC1B9162640010D017 /* ImageFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB5ADB1B9162640010D017 /* ImageFinder.swift */; };
+		66AB5ADE1B9164540010D017 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB5ADD1B9164540010D017 /* Utils.swift */; };
+		66AB5AE01B9169F20010D017 /* removed.png in Resources */ = {isa = PBXBuildFile; fileRef = 66AB5ADF1B9169F20010D017 /* removed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,10 @@
 		66AB5AC21B904D020010D017 /* TingurTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TingurTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AB5AC71B904D020010D017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AB5AC81B904D020010D017 /* TingurTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingurTests.swift; sourceTree = "<group>"; };
+		66AB5AD41B904ED20010D017 /* Tingur-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tingur-Bridging-Header.h"; sourceTree = "<group>"; };
+		66AB5ADB1B9162640010D017 /* ImageFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFinder.swift; sourceTree = "<group>"; };
+		66AB5ADD1B9164540010D017 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		66AB5ADF1B9169F20010D017 /* removed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = removed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +84,16 @@
 		66AB5AAF1B904D020010D017 /* Tingur */ = {
 			isa = PBXGroup;
 			children = (
+				66AB5ADF1B9169F20010D017 /* removed.png */,
 				66AB5AB21B904D020010D017 /* AppDelegate.swift */,
 				66AB5AB41B904D020010D017 /* ViewController.swift */,
 				66AB5AB61B904D020010D017 /* Main.storyboard */,
 				66AB5AB91B904D020010D017 /* Images.xcassets */,
 				66AB5ABB1B904D020010D017 /* LaunchScreen.xib */,
 				66AB5AB01B904D020010D017 /* Supporting Files */,
+				66AB5AD41B904ED20010D017 /* Tingur-Bridging-Header.h */,
+				66AB5ADB1B9162640010D017 /* ImageFinder.swift */,
+				66AB5ADD1B9164540010D017 /* Utils.swift */,
 			);
 			path = Tingur;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AB5AE01B9169F20010D017 /* removed.png in Resources */,
 				66AB5AB81B904D020010D017 /* Main.storyboard in Resources */,
 				66AB5ABD1B904D020010D017 /* LaunchScreen.xib in Resources */,
 				66AB5ABA1B904D020010D017 /* Images.xcassets in Resources */,
@@ -213,7 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66AB5AB51B904D020010D017 /* ViewController.swift in Sources */,
+				66AB5ADC1B9162640010D017 /* ImageFinder.swift in Sources */,
 				66AB5AB31B904D020010D017 /* AppDelegate.swift in Sources */,
+				66AB5ADE1B9164540010D017 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +356,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tingur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tingur/Tingur-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -352,7 +371,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tingur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tingur/Tingur-Bridging-Header.h";
 			};
 			name = Release;
 		};

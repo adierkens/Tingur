@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var imageFinder : ImageFinder!
+    
+    @IBAction func swipeAction(sender: UISwipeGestureRecognizer) {
+        NSLog("swipe");
+        self.pictureView.image = self.imageFinder.nextImage();
+    }
+    @IBOutlet weak var pictureView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.imageFinder = ImageFinder();
+        pictureView.image = self.imageFinder.nextImage();
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +31,3 @@ class ViewController: UIViewController {
 
 
 }
-
